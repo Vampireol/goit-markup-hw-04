@@ -342,6 +342,10 @@ img {
 
 /* Features */
 
+.section.section-features {
+  padding-bottom: 47px;
+}
+
 .feature-list {
   display: flex;
   flex-wrap: wrap;
@@ -373,6 +377,10 @@ img {
 }
 
 /* Род деятельности */
+
+.section-activity {
+  padding-top: 47px;
+}
 
 .list-activity {
   display: flex;
