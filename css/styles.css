@@ -8,6 +8,8 @@
   --background-header-color: #ffffff;
   --background-footer-color: #2f303a;
   --background-section-color: #f5f4fa;
+
+  --background-icon-color: #f5f4fa;
 }
 
 html {
@@ -121,7 +123,7 @@ img {
   color: var(--accent-color);
 }
 
-/* ---------Main-nav------------------ */
+/* -------------------Main-nav------------------ */
 .main-nav {
   display: flex;
   align-items: center;
@@ -194,7 +196,7 @@ img {
   color: var(--accent-color);
 }
 
-/* -----------HERO -------------*/
+/* -----------------------HERO----- -------------*/
 
 .section-hero .container {
   display: flex;
@@ -340,7 +342,7 @@ img {
   text-decoration: none;
 }
 
-/* Features */
+/*--------------- Features -------------------*/
 
 .section.section-features {
   padding-bottom: 47px;
@@ -357,6 +359,12 @@ img {
 
 .feature-list .features-items {
   width: 270px;
+}
+
+.feature-icon {
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
 }
 
 .features-title {
@@ -376,7 +384,7 @@ img {
   line-height: 1.71;
 }
 
-/* Род деятельности */
+/* ---------------------Род деятельности-------------*/
 
 .section-activity {
   padding-top: 47px;
@@ -402,7 +410,7 @@ img {
   text-align: center;
 }
 
-/* Наши сотрудники */
+/* ------------------Наши сотрудники -------------*/
 .section-workers {
   background-color: var(--background-section-color);
 }
@@ -432,6 +440,8 @@ img {
 .worker-pic {
   background-color: var(--background-header-color);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .worker-item {
@@ -452,7 +462,7 @@ img {
   text-align: center;
 }
 
-/* подвал */
+/* -----------------------подвал------------------ */
 .footer-page {
   background-color: #2f303a;
   padding-top: 60px;
