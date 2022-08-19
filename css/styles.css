@@ -198,7 +198,7 @@ img {
 
 /* -----------------------HERO----- -------------*/
 
-.section-hero .container {
+.hero .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,12 +206,20 @@ img {
   min-height: 412px;
 }
 
-.section-hero {
-  background-color: var(--background-footer-color);
+.hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(..//images/heroposter.jpg);
+  /* background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)), url(../images/heroposter.jpg); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
 }
 
-.section-hero .hero-title {
+.hero .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--primary-white-color);
@@ -224,7 +232,7 @@ img {
   text-align: center;
 }
 
-.section-hero .button {
+.hero .button {
   display: inline-block;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -411,7 +419,7 @@ img {
 }
 
 /* ------------------Наши сотрудники -------------*/
-.section-workers {
+.workers {
   background-color: var(--background-section-color);
 }
 
@@ -444,7 +452,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.worker-item {
+.work-title {
   margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
@@ -453,13 +461,49 @@ img {
   text-align: center;
 }
 
-.worker-list {
+.work-text {
   margin-top: 0;
   margin-bottom: 30px;
   color: var(--title-title-color);
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
+}
+
+.work-list {
+  list-style: none;
+}
+
+.container-work {
+  display: flex;
+}
+
+/*------------------- Постоянные клиенты  -----------*/
+
+.clients-list {
+  list-style: none;
+}
+
+.clients-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-item {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* -----------------------подвал------------------ */
