@@ -10,6 +10,7 @@
   --background-section-color: #f5f4fa;
 
   --background-icon-color: #f5f4fa;
+  --text-icon-color: #afb1b8;
 }
 
 html {
@@ -58,15 +59,13 @@ h2,
 h3,
 h4,
 p {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 ul,
 ol {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
 img {
@@ -174,14 +173,13 @@ img {
 .auth-nav {
   display: flex;
   margin-left: auto;
+  gap: 50px;
 }
 
 .auth-nav .link {
-  margin-right: 50px;
-}
-
-.auth-nav .link {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   color: var(--title-title-color);
   font-weight: 500;
   line-height: 1.14;
@@ -191,45 +189,49 @@ img {
   padding-bottom: 32px;
 }
 
-.auth-nav .link:hover,
-.link:focus {
+.auth-nav-link:hover,
+.auth-nav-link:focus {
   color: var(--accent-color);
+}
+
+.auth-nav-icon {
+  fill: var(--title-title-color);
+}
+
+.auth-nav-link:hover .auth-nav-icon,
+.auth-nav-link:focus .auth-nav-icon {
+  fill: var(--accent-color);
 }
 
 /* -----------------------HERO----- -------------*/
 
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 412px;
-}
-
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: url(..//images/heroposter.jpg);
-  /* background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4)), url(../images/heroposter.jpg); */
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/heroposter.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   text-align: center;
 }
 
-.hero .hero-title {
-  margin-top: 0;
+.hero-title {
+  max-width: 696px;
   margin-bottom: 30px;
-  color: var(--primary-white-color);
+  margin-left: auto;
+  margin-right: auto;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
-  max-width: 696px;
+  text-transform: uppercase;
   text-align: center;
+  color: var(--primary-white-color);
 }
 
 .hero .button {
@@ -352,21 +354,33 @@ img {
 
 /*--------------- Features -------------------*/
 
-.section.section-features {
+.features {
   padding-bottom: 47px;
 }
 
-.feature-list {
+.features-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.feature-list .features-items {
+.features-item {
   width: 270px;
+}
+
+.features-wrapper {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-icon-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .feature-icon {
@@ -376,7 +390,6 @@ img {
 }
 
 .features-title {
-  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -384,9 +397,7 @@ img {
   text-transform: uppercase;
 }
 
-.features-items {
-  margin-top: 0;
-  margin-bottom: 0;
+.features-text {
   color: var(--title-title-color);
   font-size: 14px;
   line-height: 1.71;
@@ -418,7 +429,7 @@ img {
   text-align: center;
 }
 
-/* ------------------Наши сотрудники -------------*/
+/* ------------------Наша команда -------------*/
 .workers {
   background-color: var(--background-section-color);
 }
@@ -427,13 +438,9 @@ img {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .workers-title {
-  margin-top: 0;
-  margin-bottom: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -441,11 +448,11 @@ img {
   margin-bottom: 50px;
 }
 
-.worker-pic:not(:last-child) {
+.workers-pic:not(:last-child) {
   margin-right: 30px;
 }
 
-.worker-pic {
+.workers-pic {
   background-color: var(--background-header-color);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -453,8 +460,6 @@ img {
 }
 
 .work-title {
-  margin-top: 30px;
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -462,20 +467,44 @@ img {
 }
 
 .work-text {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 16px;
   color: var(--title-title-color);
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
 
-.work-list {
-  list-style: none;
+.workers-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.container-work {
+.work-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--background-header-color);
+}
+
+.work-link {
+  border-radius: 50%;
+  background-color: var(--background-header-color);
+}
+
+.work-icon {
+  fill: var(--text-icon-color);
+}
+
+.work-list:hover .work-link,
+.work-list:focus .work-link {
+  background-color: var(--background-header-color);
+}
+
+.work-list:hover .work-icon,
+.work-list:focus .work-icon {
+  fill: var(--background-header-color);
 }
 
 /*------------------- Постоянные клиенты  -----------*/
@@ -576,4 +605,30 @@ img {
   font-size: 14px;
   line-height: 1.71;
   text-decoration: none;
+}
+
+/* ------------------Присоединяйтесь--------------------- */
+
+.page-join {
+  display: flex;
+  gap: 70px;
+}
+
+.join-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--background-header-color);
+}
+
+.join-list {
+  list-style: none;
+  display: flex;
+}
+
+.join-link {
+  width: 44px;
+  height: 44px;
+  color: var(--background-header-color);
 }
