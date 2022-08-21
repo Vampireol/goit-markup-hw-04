@@ -492,16 +492,16 @@ img {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: red;
+  background-color: var(--background-header-color);
 }
 
 .work-icon {
   fill: var(--text-icon-color);
 }
 
-.work-list:hover .work-icon,
-.work-list:focus .work-icon {
-  fill: blue;
+.work-link:hover,
+.work-link:focus {
+  background-color: var(--accent-color);
 }
 
 /*------------------- Постоянные клиенты  -----------*/
@@ -524,12 +524,27 @@ img {
 }
 
 .clients-item {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
 
 .clients-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.features-icon:hover,
+.features-icon:focus {
+  fill: var(--accent-color);
+}
+
+.clients-item:hover .features-icon:hover,
+.clients-item:focus .features-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* -----------------------подвал------------------ */
