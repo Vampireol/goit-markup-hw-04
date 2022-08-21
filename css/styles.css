@@ -468,7 +468,6 @@ img {
 
 .work-text {
   margin-top: 10px;
-  margin-bottom: 16px;
   color: var(--title-title-color);
   font-size: 16px;
   line-height: 1.18;
@@ -484,27 +483,25 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  background-color: var(--background-header-color);
 }
 
 .work-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  background-color: var(--background-header-color);
+  background-color: red;
 }
 
 .work-icon {
   fill: var(--text-icon-color);
 }
 
-.work-list:hover .work-link,
-.work-list:focus .work-link {
-  background-color: var(--background-header-color);
-}
-
 .work-list:hover .work-icon,
 .work-list:focus .work-icon {
-  fill: var(--background-header-color);
+  fill: blue;
 }
 
 /*------------------- Постоянные клиенты  -----------*/
