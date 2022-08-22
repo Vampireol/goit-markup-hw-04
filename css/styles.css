@@ -682,10 +682,10 @@ img {
 
 .join-link:hover,
 .join-link:focus {
-  fill: var(--background-header-color);
+  background: var(--accent-color);
 }
 
-.join-link:hover .join-icon,
-.join-link:focus .join-icon {
-  color: var(--accent-color);
+.join-icon,
+.join-icon {
+  fill: var(--background-header-color);
 }
