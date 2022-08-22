@@ -11,6 +11,7 @@
 
   --background-icon-color: #f5f4fa;
   --text-icon-color: #afb1b8;
+  --join-item-color: rgba(255, 255, 255, 0.1);
 }
 
 html {
@@ -315,11 +316,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: -15px -15px;
-}
-
-.worklink-list {
-  margin: 15px 15px;
+  gap: 30px;
 }
 
 .cardbox-list {
@@ -435,9 +432,9 @@ img {
 }
 
 .list-workers {
+  list-style: none;
   display: flex;
   justify-content: space-between;
-  list-style: none;
 }
 
 .workers-title {
@@ -459,61 +456,65 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.work-title {
+.work-man-title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
 
-.work-text {
+.work-man-text {
   margin-top: 10px;
+  margin-bottom: 16px;
   color: var(--title-title-color);
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
 
-.workers-card {
+.work-man-card {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-.work-list {
+.work-man-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.work-man-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.work-link {
+.work-man-link {
+  display: block;
   width: 44px;
   height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--background-header-color);
 }
 
 .work-icon {
   fill: var(--text-icon-color);
 }
 
-.work-link:hover,
-.work-link:focus {
+.work-man-link:hover,
+.work-man-link:focus {
   background-color: var(--accent-color);
 }
 
+.work-man-link:hover .work-icon,
+.work-man-link:focus .work-icon {
+  fill: var(--background-header-color);
+}
+
 /*------------------- Постоянные клиенты  -----------*/
-
-.clients-list {
-  list-style: none;
-}
-
-.clients-icon {
-  display: flex;
-  justify-content: center;
-}
 
 .clients-title {
   font-weight: 700;
@@ -523,28 +524,50 @@ img {
   margin-bottom: 50px;
 }
 
+.clients-list {
+  display: flex;
+  list-style: none;
+}
+
+.container-clients-icon {
+  display: flex;
+  justify-content: center;
+}
+
 .clients-item {
-  width: 170px;
-  height: 92px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
 }
 
 .clients-item:not(:last-child) {
   margin-right: 30px;
 }
 
-.features-icon:hover,
-.features-icon:focus {
+.clients-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
   fill: var(--accent-color);
 }
 
-.clients-item:hover .features-icon:hover,
-.clients-item:focus .features-icon:focus {
-  fill: var(--accent-color);
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  color: var(--accent-color);
 }
 
 /* -----------------------подвал------------------ */
@@ -631,16 +654,38 @@ img {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 20px;
   color: var(--background-header-color);
 }
 
 .join-list {
   list-style: none;
   display: flex;
+  gap: 10px;
+}
+
+.join-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .join-link {
   width: 44px;
   height: 44px;
-  color: var(--background-header-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--join-item-color);
+}
+
+.join-link:hover,
+.join-link:focus {
+  fill: var(--background-header-color);
+}
+
+.join-link:hover .join-icon,
+.join-link:focus .join-icon {
+  color: var(--accent-color);
 }
