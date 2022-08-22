@@ -560,14 +560,14 @@ img {
   border-color: var(--accent-color);
 }
 
-.clients-icon:hover,
+/* .clients-icon:hover,
 .clients-icon:focus {
   fill: var(--accent-color);
-}
+} */
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-  color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
 /* -----------------------подвал------------------ */
