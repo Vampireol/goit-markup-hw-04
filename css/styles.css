@@ -12,6 +12,7 @@
   --background-icon-color: #f5f4fa;
   --text-icon-color: #afb1b8;
   --join-item-color: rgba(255, 255, 255, 0.1);
+  --clients-icon-color: #afb1b8;
 }
 
 html {
@@ -554,16 +555,15 @@ img {
   border-radius: 4px;
 }
 
+.clients-icon {
+  fill: var(--clients-icon-color);
+}
+
 .clients-link:hover,
 .clients-link:focus {
   outline: none;
   border-color: var(--accent-color);
 }
-
-/* .clients-icon:hover,
-.clients-icon:focus {
-  fill: var(--accent-color);
-} */
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
